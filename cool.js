@@ -1,37 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-    <!ENTITY custom_entity "Hello">
-]>
-<svg xmlns="http://www.w3.org/2000/svg"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-  viewBox="-105 -100 2100 2700" width="2100" height="2700">
-  <inkscape:custom x="42" inkscape:z="555">Some value</inkscape:custom>
-  <defs>
-    <linearGradient id="skin" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="yellow" stop-opacity="1.0"/>
-      <stop offset="75%" stop-color="gold" stop-opacity="1.0"/>
-      <stop offset="100%" stop-color="orange" stop-opacity="1"/>
-    </linearGradient>
-  </defs>
-
-  <g id="smiley" inkscape:groupmode="layer" inkscape:label="Smiley">
-    <!-- Head -->
-    <circle class="move" cx="0" cy="0" r="50"
-      fill="url(#skin)" stroke="orange" stroke-width="2"/>
-    <!-- Eyes -->
-    <ellipse class="move" cx="-20" cy="-10" rx="6" ry="8" fill="black" stroke="none"/>
-    <ellipse class="move" cx="20" cy="-10" rx="6" ry="8" fill="black" stroke="none"/>
-    <!-- Mouth -->
-    <path id="mouth" d="M-20 20 A25 25 0 0 0 20 20"
-      fill="white" stroke="black" stroke-width="3"/>
-  </g>
-  <text x="-60" y="75">&custom_entity;, I'm human!</text>
-    <!-- Projectile -->
-  <circle class="projectile" cx="20" cy="20" r="10"
-      fill="red" fill-opacity="0"/>
-  <script type="text/javascript">
-    <![CDATA[
 var KEY = { w: 87, a: 65, s: 83, d: 68, j: 74 };
 var moveSpeed = 50;
 
@@ -184,7 +150,3 @@ document.documentElement.addEventListener('keydown', function (evt) {
 
 smiley.addEventListener("mouseenter", setRadius(100, "red", 250, "AAAAAAAAAAAAAAA"))
 smiley.addEventListener("mouseleave", setRadius(8, "black", 25, "Hello, I'm Human"))
-
-    ]]>
-  </script>
-</svg>
