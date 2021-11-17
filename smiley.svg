@@ -160,14 +160,19 @@ document.documentElement.addEventListener('keydown', function (evt) {
             projectile.setAttribute("fill-opacity", 1)
             sR(100, "red", 250, "AAAAAAAAAAAAAAA")
             if (!shooting) {
+                projectile.setAttribute("r", 10)
                 shooting = true
                 projectile.setAttribute("cx", (ml[0] + ml[7]) / 2)
                 projectile.setAttribute("cy", ml[8])
                 let x_pos = parseInt(projectile.getAttribute("cx"))
+                let ballSize = parseInt(projectile.getAttribute("r"))
                 ints += 1
                 setInterval(function () {
                     let x_pos = parseInt(projectile.getAttribute("cx"))
+                    let ballSize = parseInt(projectile.getAttribute("r"))
                     if (shooting) {
+                        ballSize += 25 / ints
+                        projectile.setAttribute("r", ballSize)
                         x_pos += 300 / ints
                         projectile.setAttribute("cx", x_pos)
                         if (x_pos > 3000) {
